@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Post-it{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
+            <script src="{{ asset('js/main.js') }}"></script>
+            <!--<script src="{{ asset('js/bootstrap-3.3.4.min.js') }}"></script>-->
+        {% endblock %}
+    </body>
+</html>

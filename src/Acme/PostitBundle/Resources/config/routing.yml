@@ -1,0 +1,16 @@
+
+postit_index:
+    path: /
+    defaults: { _controller: PostitBundle:Postit:index }
+
+postit_list:
+    path: /list
+    defaults: { _controller: PostitBundle:Postit:list }
+
+postit_delete:
+    path: /delete
+    defaults: { _controller: PostitBundle:Postit:delete}
+
+postit_add:
+    path: /add
+    defaults: { _controller: PostitBundle:Postit:add }

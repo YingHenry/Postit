@@ -1,0 +1,4 @@
+postit:
+    resource: "@PostitBundle/Resources/config/routing.yml"
+    prefix:   /
+
