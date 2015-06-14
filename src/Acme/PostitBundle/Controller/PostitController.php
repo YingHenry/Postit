@@ -25,7 +25,7 @@ class PostitController extends Controller
     	foreach ($postits as $postit) {
     		$data[] = [
     			'id' 		=> $postit->getId(),
-    			'date' 		=> $postit->getDate(),
+    			'date' 		=> $postit->getDate()->format("Y-m-d H:i:s"),
     			'content' 	=> $postit->getContent(),
     			'color' 	=> $postit->getColor()
     			];

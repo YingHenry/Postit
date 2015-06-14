@@ -17,7 +17,7 @@ $(function(){
 						html += '<tr>';
 					}
 					html += '<td class="' + response[i]['color'] + '">';
-					html += '<h2>' + response[i]['date']['date'] + '</h2>'; // le champ date donne un objet avec plusieurs propriétés: date, timezone_type, timezone
+					html += '<h2>' + response[i]['date'] + '</h2>'; 
 					//console.log(response[i]['date']);
 					html += ' ';
 					html += '<p>' + response[i]['content'] + '</p>';
