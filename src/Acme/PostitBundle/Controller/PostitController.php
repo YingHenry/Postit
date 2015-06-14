@@ -31,17 +31,10 @@ class PostitController extends Controller
     			];
     	}
 
-
-    	//$data = [['id' => 1, 'date' => '2/6/15 12:37', 'content' => 'bosser', 'color' => 'blue']];
-
         $response = new JsonResponse();
         $response->setCharset('UTF-8');
         $response->setStatusCode(200);
-/*
-        $responseData = array(
-            'error' => false,
-            'data' => $data,
-        );*/        
+       
         $response->setData($data);
 
         return $response;
@@ -52,7 +45,7 @@ class PostitController extends Controller
     	$repository = $this->getDoctrine()->getRepository('PostitBundle:Postit');
     	$postit = $repository->findOneById($request->request->get('id'));
 
-    	if (!$postit){
+    	if (!$postit) {
     		throw $this->createNotFoundException('Ce post-it n\'existe pas!');
     	}
 
@@ -63,7 +56,6 @@ class PostitController extends Controller
         $this->get('session')->getFlashBag()->add('success', 'Le Post-it a bien été supprimé.');    
 
         return new JsonResponse();
-        //return	$this->redirect($this->generateUrl('postit_index'));
     }
 
     public function addAction(Request $request)

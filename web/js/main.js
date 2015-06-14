@@ -1,6 +1,4 @@
 $(function(){
-	//alert('hello');
-	//$('#postitList').html('ok');
 
 	function getList(){
 		$.ajax({
@@ -18,10 +16,8 @@ $(function(){
 					}
 					html += '<td class="' + response[i]['color'] + '">';
 					html += '<h2>' + response[i]['date'] + '</h2>'; 
-					//console.log(response[i]['date']);
 					html += ' ';
 					html += '<p>' + response[i]['content'] + '</p>';
-					//html += '<button id="' + response[i]['id'] + '" class="delete">Supprimer</button>'
 					html += '<a href="#" id="' + response[i]['id'] + '" onclick="return false">X</a>'	
 					html += '</td>';
 
@@ -34,10 +30,7 @@ $(function(){
 
 				$('#postitList').html(html);
 
-				//$('button[class=delete]').click(function(){
 				$('a').click(function(){
-					//$('#postitList').html('clické!');
-					//alert('click!');
 					deletePostit($(this).attr('id'));
 				});
 			},
